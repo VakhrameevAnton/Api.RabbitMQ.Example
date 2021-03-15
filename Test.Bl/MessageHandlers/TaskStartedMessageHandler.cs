@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -44,6 +45,7 @@ namespace Test.Bl.MessageHandlers
 
             // Меняем статус
             task.State = ETaskState.Finished;
+            task.TimeStamp = DateTime.UtcNow;
             _dbContext.Update(task);
             await _dbContext.SaveChangesAsync();
         }

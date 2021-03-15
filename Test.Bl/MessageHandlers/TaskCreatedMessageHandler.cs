@@ -48,6 +48,7 @@ namespace Test.Bl.MessageHandlers
 
             // Меняем статус
             task.State = ETaskState.Running;
+            task.TimeStamp = DateTime.UtcNow;
             _dbContext.Update(task);
             await _dbContext.SaveChangesAsync();
 
