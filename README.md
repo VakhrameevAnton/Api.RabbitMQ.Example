@@ -1,5 +1,5 @@
 # Api.RabbitMQ.Example
-Example of web api with rabbitmq integration. Scheduled messages was used, too.
+    Example of web api with rabbitmq integration. Scheduled messages was used, too.
 
 # Need to be installed
     rabbitmq
